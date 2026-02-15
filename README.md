@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://via.placeholder.com/200x200?text=Apex+Circle" alt="Apex Circle Logo" width="200" />
+  <img src="https://media.licdn.com/dms/image/v2/D4E0BAQF1PHwKK_ViDg/img-crop_100/B4EZnsRhrXIIAM-/0/1760605642362?e=1772668800&v=beta&t=zHdmlHtd1gM7B8bS-OHUtzOdNnWiJXSb_k-nPrlHtHg" alt="Apex Circle Logo" width="200" />
 </p>
 
 <h1 align="center">Apex Circle</h1>
