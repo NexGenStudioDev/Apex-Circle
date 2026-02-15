@@ -1,0 +1,162 @@
+name: CI
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master, develop]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ─── Lint Commit Messages ──────────────────────────────────────────
+  commitlint:
+    name: Lint Commit Messages
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install commitlint
+        run: npm install -g @commitlint/cli @commitlint/config-conventional
+
+      - name: Validate PR commits
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  # ─── Frontend Checks ───────────────────────────────────────────────
+  frontend:
+    name: Frontend Checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Apex-Circle-Frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: Apex-Circle-Frontend/pnpm-lock.yaml
+
+      - name: Check if package.json exists
+        id: check-frontend
+        run: |
+          if [ -f "package.json" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install dependencies
+        if: steps.check-frontend.outputs.exists == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        if: steps.check-frontend.outputs.exists == 'true'
+        run: pnpm lint --if-present
+
+      - name: Type check
+        if: steps.check-frontend.outputs.exists == 'true'
+        run: pnpm type-check --if-present
+
+      - name: Build
+        if: steps.check-frontend.outputs.exists == 'true'
+        run: pnpm build --if-present
+
+      - name: Test
+        if: steps.check-frontend.outputs.exists == 'true'
+        run: pnpm test --if-present
+
+  # ─── Backend Checks ────────────────────────────────────────────────
+  backend:
+    name: Backend Checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Apex-Circle-Backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: Apex-Circle-Backend/pnpm-lock.yaml
+
+      - name: Check if package.json exists
+        id: check-backend
+        run: |
+          if [ -f "package.json" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Install dependencies
+        if: steps.check-backend.outputs.exists == 'true'
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        if: steps.check-backend.outputs.exists == 'true'
+        run: pnpm lint --if-present
+
+      - name: Type check
+        if: steps.check-backend.outputs.exists == 'true'
+        run: pnpm type-check --if-present
+
+      - name: Build
+        if: steps.check-backend.outputs.exists == 'true'
+        run: pnpm build --if-present
+
+      - name: Test
+        if: steps.check-backend.outputs.exists == 'true'
+        run: pnpm test --if-present
+
+  # ─── Desktop App Checks ────────────────────────────────────────────
+  desktop:
+    name: Desktop App Checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Apex-Circle-Dasktop-Application
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          cache-dependency-path: Apex-Circle-Dasktop-Application/pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint --if-present
+
+      - name: Type check
+        run: pnpm build

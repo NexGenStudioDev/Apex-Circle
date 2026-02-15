@@ -1,0 +1,44 @@
+name: Welcome New Contributors
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    name: Welcome
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 **Welcome to Apex Circle!**
+
+            Thank you for opening your first issue! We appreciate you taking the time to report this.
+
+            A maintainer will review it shortly. In the meantime:
+            - Make sure you've filled out the issue template completely
+            - Check the [Contributing Guidelines](https://github.com/NexGenStudioDev/Apex-Circle/blob/master/CONTRIBUTING.md)
+            - Join the [Discussions](https://github.com/NexGenStudioDev/Apex-Circle/discussions) for questions
+
+            Happy coding! 🚀
+          pr-message: |
+            👋 **Welcome to Apex Circle!**
+
+            Thank you for your first pull request! We're excited to have you contribute.
+
+            A maintainer will review your PR shortly. Please make sure:
+            - [ ] Your commits follow [Conventional Commits](https://www.conventionalcommits.org/)
+            - [ ] The PR template is filled out completely
+            - [ ] All CI checks pass
+
+            Check our [Contributing Guidelines](https://github.com/NexGenStudioDev/Apex-Circle/blob/master/CONTRIBUTING.md) if you haven't already.
+
+            Happy coding! 🚀

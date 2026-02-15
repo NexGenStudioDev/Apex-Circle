@@ -1,0 +1,102 @@
+name: "✨ Feature Request"
+description: Suggest a new feature or enhancement for Apex Circle
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        Thank you for taking the time to suggest a feature! Please fill out the details below.
+
+  - type: dropdown
+    id: target-component
+    attributes:
+      label: Target Component
+      description: Which part of the platform should this feature be added to?
+      options:
+        - Community Website (Frontend)
+        - Desktop Admin App
+        - Backend API
+        - Documentation
+        - DevOps / Infrastructure
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is this feature related to a problem? Describe it clearly.
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see.
+      placeholder: Describe your ideal solution...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative approaches?
+      placeholder: Describe alternative solutions or features you've considered...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - 🟢 Nice to Have — Would be a good addition
+        - 🟡 Important — Would significantly improve experience
+        - 🔴 Critical — Blocking current workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups / References
+      description: If you have any mockups, wireframes, or reference links, add them here.
+      placeholder: Drag and drop images or paste links...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context or information about the feature request.
+      placeholder: Add any other context here...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Contribution
+      description: Would you be willing to contribute this feature?
+      options:
+        - label: I am willing to submit a pull request for this feature
+          required: false
+
+  - type: checkboxes
+    id: code-of-conduct
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct.
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

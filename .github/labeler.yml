@@ -1,0 +1,43 @@
+# Auto-labeler configuration for PR labeling based on changed files
+# Used by .github/workflows/auto-label.yml
+
+frontend:
+  - changed-files:
+      - any-glob-to-any-file: "Apex-Circle-Frontend/**"
+
+backend:
+  - changed-files:
+      - any-glob-to-any-file: "Apex-Circle-Backend/**"
+
+desktop:
+  - changed-files:
+      - any-glob-to-any-file: "Apex-Circle-Dasktop-Application/**"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "docs/**"
+
+ci:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/package.json"
+          - "**/pnpm-lock.yaml"
+          - "**/Cargo.toml"
+          - "**/Cargo.lock"
+
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/tsconfig*.json"
+          - "**/vite.config.*"
+          - "**/tailwind.config.*"
+          - "**/tauri.conf.json"
+          - "**/.eslintrc*"
+          - "**/.prettierrc*"
