@@ -42,12 +42,12 @@ Comparable ecosystems: GDG, MLSA, DevRel communities.
 
 ## Tech Stack
 
-| Layer | Technologies |
-|---|---|
+| Layer                 | Technologies                                                                   |
+| --------------------- | ------------------------------------------------------------------------------ |
 | **Community Website** | React · TypeScript · Tailwind CSS · React Router v6 · TanStack Query · Zustand |
-| **Desktop Admin App** | Tauri v2 · React · TypeScript · Tailwind CSS · Vite |
-| **Backend API** | Node.js 20+ · Express.js · TypeScript · MongoDB · Mongoose · JWT · Zod |
-| **Infrastructure** | Vercel · Render/Railway · MongoDB Atlas · Cloudinary · GitHub Actions · Sentry |
+| **Desktop Admin App** | Tauri v2 · React · TypeScript · Tailwind CSS · Vite                            |
+| **Backend API**       | Node.js 20+ · Express.js · TypeScript · MongoDB · Mongoose · JWT · Zod         |
+| **Infrastructure**    | Vercel · Render/Railway · MongoDB Atlas · Cloudinary · GitHub Actions · Sentry |
 
 ---
 
@@ -142,15 +142,15 @@ pnpm tauri dev
 
 ## Roles & Permissions
 
-| Role | Description |
-|---|---|
-| **Visitor** | Public pages, no authentication required |
-| **Member** | Dashboard, event registration, hackathon participation |
-| **Volunteer** | Member privileges + limited operational tasks |
-| **Organizer** | Manage events, hackathons, and content |
-| **Admin** | Full platform control |
-| **Hackathon Manager** | Hackathon-specific full control |
-| **Content Manager** | Blog, resources, CMS, and gallery management |
+| Role                  | Description                                            |
+| --------------------- | ------------------------------------------------------ |
+| **Visitor**           | Public pages, no authentication required               |
+| **Member**            | Dashboard, event registration, hackathon participation |
+| **Volunteer**         | Member privileges + limited operational tasks          |
+| **Organizer**         | Manage events, hackathons, and content                 |
+| **Admin**             | Full platform control                                  |
+| **Hackathon Manager** | Hackathon-specific full control                        |
+| **Content Manager**   | Blog, resources, CMS, and gallery management           |
 
 ---
 

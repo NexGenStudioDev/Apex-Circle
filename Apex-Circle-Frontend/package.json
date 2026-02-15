@@ -1,0 +1,12 @@
+{
+  "name": "apex-circle-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Apex Circle Frontend",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Frontend not yet configured'",
+    "build": "echo 'Frontend not yet configured'",
+    "lint": "echo 'Frontend lint not yet configured'"
+  }
+}

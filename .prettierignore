@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+.next/
+**/.next/
+build/
+**/build/
+
+# Tauri
+src-tauri/target/
+
+# Lock files
+pnpm-lock.yaml
+**/pnpm-lock.yaml
+package-lock.json
+yarn.lock
+Cargo.lock
+
+# Auto-generated
+*.min.js
+*.min.css
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Git
+.git/

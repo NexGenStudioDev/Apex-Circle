@@ -1,0 +1,12 @@
+{
+  "name": "apex-circle-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Apex Circle Backend",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Backend not yet configured'",
+    "build": "echo 'Backend not yet configured'",
+    "lint": "echo 'Backend lint not yet configured'"
+  }
+}

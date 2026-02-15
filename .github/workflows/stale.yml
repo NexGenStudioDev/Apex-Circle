@@ -31,7 +31,6 @@ jobs:
             This issue was closed because it has been stale for 7 days with no activity.
             Feel free to reopen if this is still relevant.
           exempt-issue-labels: "pinned,security,good first issue,help wanted"
-
           # Stale PRs
           stale-pr-message: >
             This pull request has been automatically marked as stale because it has not had

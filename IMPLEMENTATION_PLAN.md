@@ -2,11 +2,11 @@
 
 > **Research-grade, end-to-end system blueprint** covering architecture, modules, workflows, data, permissions, states, UX, and operational concerns across all three layers.
 
-| Layer | Tech Stack |
-|---|---|
-| 🌐 Community Website | React + TypeScript + Tailwind |
-| 🖥 Desktop Admin App | Tauri + React + TypeScript |
-| 🟩 Backend API | Node + Express + TypeScript + MongoDB |
+| Layer                | Tech Stack                            |
+| -------------------- | ------------------------------------- |
+| 🌐 Community Website | React + TypeScript + Tailwind         |
+| 🖥 Desktop Admin App | Tauri + React + TypeScript            |
+| 🟩 Backend API       | Node + Express + TypeScript + MongoDB |
 
 ---
 
@@ -48,67 +48,67 @@ Apex Circle is a developer community platform enabling:
 
 ### Frontend Web
 
-| Concern | Choice |
-|---|---|
-| Framework | React + TypeScript |
-| Styling | Tailwind CSS |
-| Routing | React Router v6 |
-| Data Fetching | TanStack Query (React Query) |
-| Forms | React Hook Form + Zod |
-| State | Zustand (global) / Context (local) |
-| Icons | Lucide React |
-| Animations | Framer Motion |
+| Concern       | Choice                             |
+| ------------- | ---------------------------------- |
+| Framework     | React + TypeScript                 |
+| Styling       | Tailwind CSS                       |
+| Routing       | React Router v6                    |
+| Data Fetching | TanStack Query (React Query)       |
+| Forms         | React Hook Form + Zod              |
+| State         | Zustand (global) / Context (local) |
+| Icons         | Lucide React                       |
+| Animations    | Framer Motion                      |
 
 ### Desktop App
 
-| Concern | Choice |
-|---|---|
-| Shell | Tauri v2 |
-| UI | React + TypeScript + Tailwind |
-| Local Storage | Tauri secure store |
-| API | Same backend as web |
-| Build | Vite + Tauri CLI |
+| Concern       | Choice                        |
+| ------------- | ----------------------------- |
+| Shell         | Tauri v2                      |
+| UI            | React + TypeScript + Tailwind |
+| Local Storage | Tauri secure store            |
+| API           | Same backend as web           |
+| Build         | Vite + Tauri CLI              |
 
 ### Backend API
 
-| Concern | Choice |
-|---|---|
-| Runtime | Node.js 20+ |
-| Framework | Express.js |
-| Language | TypeScript |
-| Database | MongoDB + Mongoose |
-| Auth | JWT (access + refresh) + RBAC |
-| Media | Cloudinary |
-| Validation | Zod |
-| Email | Nodemailer / Resend |
-| Logging | Winston |
-| Testing | Vitest + Supertest |
+| Concern    | Choice                        |
+| ---------- | ----------------------------- |
+| Runtime    | Node.js 20+                   |
+| Framework  | Express.js                    |
+| Language   | TypeScript                    |
+| Database   | MongoDB + Mongoose            |
+| Auth       | JWT (access + refresh) + RBAC |
+| Media      | Cloudinary                    |
+| Validation | Zod                           |
+| Email      | Nodemailer / Resend           |
+| Logging    | Winston                       |
+| Testing    | Vitest + Supertest            |
 
 ### Infrastructure
 
-| Concern | Choice |
-|---|---|
-| Web Hosting | Vercel |
-| API Hosting | Render / Railway |
-| Database | MongoDB Atlas |
-| CDN | Cloudinary CDN / Vercel Edge |
-| Object Storage | Cloudinary |
-| CI/CD | GitHub Actions |
-| Monitoring | Sentry (errors) + Uptime Kuma |
+| Concern        | Choice                        |
+| -------------- | ----------------------------- |
+| Web Hosting    | Vercel                        |
+| API Hosting    | Render / Railway              |
+| Database       | MongoDB Atlas                 |
+| CDN            | Cloudinary CDN / Vercel Edge  |
+| Object Storage | Cloudinary                    |
+| CI/CD          | GitHub Actions                |
+| Monitoring     | Sentry (errors) + Uptime Kuma |
 
 ---
 
 ## 3. Global Role Model
 
-| Role | Scope |
-|---|---|
-| **Visitor** | Public pages, no auth |
-| **Member** | Authenticated, dashboard, events, hackathons |
-| **Volunteer** | Member + limited ops tasks |
-| **Organizer** | Manage events, hackathons, content |
-| **Admin** | Full platform control |
-| **Hackathon Manager** | Hackathon-specific full control |
-| **Content Manager** | Blog, resources, CMS, gallery |
+| Role                  | Scope                                        |
+| --------------------- | -------------------------------------------- |
+| **Visitor**           | Public pages, no auth                        |
+| **Member**            | Authenticated, dashboard, events, hackathons |
+| **Volunteer**         | Member + limited ops tasks                   |
+| **Organizer**         | Manage events, hackathons, content           |
+| **Admin**             | Full platform control                        |
+| **Hackathon Manager** | Hackathon-specific full control              |
+| **Content Manager**   | Blog, resources, CMS, gallery                |
 
 **RBAC enforced at backend → consumed by web & desktop.**
 
@@ -146,34 +146,34 @@ Audit logs          —        —       —          R          CRUD   R       
 
 ### Public Pages
 
-| Page | Route | Description |
-|---|---|---|
-| Home | `/` | Community landing page |
-| About | `/about` | Mission, vision, story |
-| Events | `/events` | Events listing |
-| Event Details | `/events/:slug` | Single event |
-| Hackathons | `/hackathons` | Hackathons listing |
-| Hackathon Details | `/hackathons/:slug` | Single hackathon |
-| Gallery | `/gallery` | Photo albums |
-| Projects | `/projects` | Community project showcase |
-| Resources | `/resources` | Learning materials |
-| Blog | `/blog` | Community blog |
-| Blog Post | `/blog/:slug` | Single post |
-| Team | `/team` | Leadership & volunteers |
-| Partners | `/partners` | Sponsors & collaborators |
-| Join Community | `/join` | Application form |
-| Contact | `/contact` | Contact form |
+| Page              | Route               | Description                |
+| ----------------- | ------------------- | -------------------------- |
+| Home              | `/`                 | Community landing page     |
+| About             | `/about`            | Mission, vision, story     |
+| Events            | `/events`           | Events listing             |
+| Event Details     | `/events/:slug`     | Single event               |
+| Hackathons        | `/hackathons`       | Hackathons listing         |
+| Hackathon Details | `/hackathons/:slug` | Single hackathon           |
+| Gallery           | `/gallery`          | Photo albums               |
+| Projects          | `/projects`         | Community project showcase |
+| Resources         | `/resources`        | Learning materials         |
+| Blog              | `/blog`             | Community blog             |
+| Blog Post         | `/blog/:slug`       | Single post                |
+| Team              | `/team`             | Leadership & volunteers    |
+| Partners          | `/partners`         | Sponsors & collaborators   |
+| Join Community    | `/join`             | Application form           |
+| Contact           | `/contact`          | Contact form               |
 
 ### Authenticated Pages
 
-| Page | Route | Description |
-|---|---|---|
-| Member Dashboard | `/dashboard` | Overview |
-| My Events | `/dashboard/events` | Registered events |
-| My Hackathons | `/dashboard/hackathons` | Hackathon participation |
-| Certificates | `/dashboard/certificates` | Earned certificates |
-| Profile | `/dashboard/profile` | Edit profile |
-| Announcements | `/dashboard/announcements` | Community announcements |
+| Page             | Route                      | Description             |
+| ---------------- | -------------------------- | ----------------------- |
+| Member Dashboard | `/dashboard`               | Overview                |
+| My Events        | `/dashboard/events`        | Registered events       |
+| My Hackathons    | `/dashboard/hackathons`    | Hackathon participation |
+| Certificates     | `/dashboard/certificates`  | Earned certificates     |
+| Profile          | `/dashboard/profile`       | Edit profile            |
+| Announcements    | `/dashboard/announcements` | Community announcements |
 
 ---
 
@@ -181,21 +181,21 @@ Audit logs          —        —       —          R          CRUD   R       
 
 ### Sections (top → bottom)
 
-| # | Section | Data Source | Dynamic |
-|---|---|---|---|
-| 1 | **Hero** | CMS ContentBlock | ✅ |
-| 2 | **Community Intro** | CMS ContentBlock | ✅ |
-| 3 | **Upcoming Events** | Events API (next 3) | ✅ |
-| 4 | **Active Hackathons** | Hackathons API (active) | ✅ |
-| 5 | **What We Do** | CMS ContentBlock | ✅ |
-| 6 | **Impact Stats** | Analytics API | ✅ |
-| 7 | **Featured Projects** | Projects API (featured) | ✅ |
-| 8 | **Gallery Preview** | Gallery API (latest album) | ✅ |
-| 9 | **Team Preview** | Team API (leads) | ✅ |
-| 10 | **Testimonials** | CMS ContentBlock | ✅ |
-| 11 | **Partners** | Partners API | ✅ |
-| 12 | **Join CTA** | Static + link | ❌ |
-| 13 | **Footer** | CMS + static | Partial |
+| #   | Section               | Data Source                | Dynamic |
+| --- | --------------------- | -------------------------- | ------- |
+| 1   | **Hero**              | CMS ContentBlock           | ✅      |
+| 2   | **Community Intro**   | CMS ContentBlock           | ✅      |
+| 3   | **Upcoming Events**   | Events API (next 3)        | ✅      |
+| 4   | **Active Hackathons** | Hackathons API (active)    | ✅      |
+| 5   | **What We Do**        | CMS ContentBlock           | ✅      |
+| 6   | **Impact Stats**      | Analytics API              | ✅      |
+| 7   | **Featured Projects** | Projects API (featured)    | ✅      |
+| 8   | **Gallery Preview**   | Gallery API (latest album) | ✅      |
+| 9   | **Team Preview**      | Team API (leads)           | ✅      |
+| 10  | **Testimonials**      | CMS ContentBlock           | ✅      |
+| 11  | **Partners**          | Partners API               | ✅      |
+| 12  | **Join CTA**          | Static + link              | ❌      |
+| 13  | **Footer**            | CMS + static               | Partial |
 
 ### Component Breakdown
 
@@ -245,15 +245,15 @@ All sections **CMS-managed** via desktop app.
 
 ### Event Details Page (`/events/:slug`)
 
-| Section | Content |
-|---|---|
-| Banner | Event cover image |
-| Title + Meta | Name, date/time, location, type |
-| Description | Rich text |
-| Agenda | Timeline items |
-| Speakers | Speaker cards (name, bio, photo) |
-| Registration | Button + capacity status |
-| Share | Social share links |
+| Section      | Content                          |
+| ------------ | -------------------------------- |
+| Banner       | Event cover image                |
+| Title + Meta | Name, date/time, location, type  |
+| Description  | Rich text                        |
+| Agenda       | Timeline items                   |
+| Speakers     | Speaker cards (name, bio, photo) |
+| Registration | Button + capacity status         |
+| Share        | Social share links               |
 
 ### Member Actions
 
@@ -272,15 +272,15 @@ All sections **CMS-managed** via desktop app.
 
 ### Hackathon Details (`/hackathons/:slug`)
 
-| Section | Content |
-|---|---|
-| Overview | Description, format, rules |
-| Tracks | Track cards with descriptions |
-| Prizes | Prize breakdown per track |
-| Timeline | Phase dates (registration → submission → judging → results) |
-| Judges | Judge profiles |
-| Registration | Solo or team registration |
-| FAQ | Common questions |
+| Section      | Content                                                     |
+| ------------ | ----------------------------------------------------------- |
+| Overview     | Description, format, rules                                  |
+| Tracks       | Track cards with descriptions                               |
+| Prizes       | Prize breakdown per track                                   |
+| Timeline     | Phase dates (registration → submission → judging → results) |
+| Judges       | Judge profiles                                              |
+| Registration | Solo or team registration                                   |
+| FAQ          | Common questions                                            |
 
 ### Member Actions
 
@@ -303,14 +303,14 @@ All sections **CMS-managed** via desktop app.
 
 ### Project Card
 
-| Field | Type |
-|---|---|
-| Name | String |
-| Description | Text |
-| Tech Stack | Tags |
-| Links | GitHub, demo, etc. |
-| Contributors | Member references |
-| Thumbnail | Image |
+| Field        | Type               |
+| ------------ | ------------------ |
+| Name         | String             |
+| Description  | Text               |
+| Tech Stack   | Tags               |
+| Links        | GitHub, demo, etc. |
+| Contributors | Member references  |
+| Thumbnail    | Image              |
 
 - Filter by tech, category
 - Search by name
@@ -319,12 +319,12 @@ All sections **CMS-managed** via desktop app.
 
 ## 1.8 Resources
 
-| Type | Format |
-|---|---|
-| Documents | PDF, slides |
-| Videos | YouTube embeds |
-| Slides | SlideShare / Google Slides |
-| Repositories | GitHub links |
+| Type         | Format                     |
+| ------------ | -------------------------- |
+| Documents    | PDF, slides                |
+| Videos       | YouTube embeds             |
+| Slides       | SlideShare / Google Slides |
+| Repositories | GitHub links               |
 
 - **Filter:** Type, category, difficulty
 - **Search:** Title, description
@@ -344,11 +344,11 @@ All sections **CMS-managed** via desktop app.
 
 ### Grouped by Role
 
-| Group | Display |
-|---|---|
+| Group          | Display                          |
+| -------------- | -------------------------------- |
 | **Leadership** | Photo, name, title, bio, socials |
-| **Organizers** | Photo, name, role |
-| **Volunteers** | Photo, name, role |
+| **Organizers** | Photo, name, role                |
+| **Volunteers** | Photo, name, role                |
 
 ---
 
@@ -364,17 +364,17 @@ All sections **CMS-managed** via desktop app.
 
 ### Application Form
 
-| Field | Type | Required |
-|---|---|---|
-| Full Name | Text | ✅ |
-| Email | Email | ✅ |
-| Phone | Text | ❌ |
-| College / Company | Text | ✅ |
-| Role / Year | Text | ✅ |
-| Skills | Multi-select / tags | ✅ |
-| Why join? | Textarea | ✅ |
-| Portfolio / GitHub | URL | ❌ |
-| LinkedIn | URL | ❌ |
+| Field              | Type                | Required |
+| ------------------ | ------------------- | -------- |
+| Full Name          | Text                | ✅       |
+| Email              | Email               | ✅       |
+| Phone              | Text                | ❌       |
+| College / Company  | Text                | ✅       |
+| Role / Year        | Text                | ✅       |
+| Skills             | Multi-select / tags | ✅       |
+| Why join?          | Textarea            | ✅       |
+| Portfolio / GitHub | URL                 | ❌       |
+| LinkedIn           | URL                 | ❌       |
 
 **Flow:** Submit → Backend creates Application (Pending) → Desktop app review → Approve/Reject → Email notification.
 
@@ -382,11 +382,11 @@ All sections **CMS-managed** via desktop app.
 
 ## 1.13 Contact Page
 
-| Field | Type |
-|---|---|
-| Name | Text |
-| Email | Email |
-| Subject | Text |
+| Field   | Type     |
+| ------- | -------- |
+| Name    | Text     |
+| Email   | Email    |
+| Subject | Text     |
 | Message | Textarea |
 
 Submit → Backend inbox → Desktop app view.
@@ -397,13 +397,13 @@ Submit → Backend inbox → Desktop app view.
 
 ### Sidebar Navigation
 
-| Item | Route |
-|---|---|
-| Dashboard | `/dashboard` |
-| My Events | `/dashboard/events` |
-| My Hackathons | `/dashboard/hackathons` |
-| Certificates | `/dashboard/certificates` |
-| Profile | `/dashboard/profile` |
+| Item          | Route                      |
+| ------------- | -------------------------- |
+| Dashboard     | `/dashboard`               |
+| My Events     | `/dashboard/events`        |
+| My Hackathons | `/dashboard/hackathons`    |
+| Certificates  | `/dashboard/certificates`  |
+| Profile       | `/dashboard/profile`       |
 | Announcements | `/dashboard/announcements` |
 
 ### Dashboard Overview
@@ -446,16 +446,16 @@ Submit → Backend inbox → Desktop app view.
 
 ### Editable Fields
 
-| Field | Type |
-|---|---|
-| Display Name | Text |
-| Bio | Textarea |
-| Avatar | Image upload |
-| Skills | Tags |
-| GitHub | URL |
-| LinkedIn | URL |
-| Portfolio | URL |
-| College / Company | Text |
+| Field             | Type         |
+| ----------------- | ------------ |
+| Display Name      | Text         |
+| Bio               | Textarea     |
+| Avatar            | Image upload |
+| Skills            | Tags         |
+| GitHub            | URL          |
+| LinkedIn          | URL          |
+| Portfolio         | URL          |
+| College / Company | Text         |
 
 ---
 
@@ -467,26 +467,26 @@ Submit → Backend inbox → Desktop app view.
 
 ## 2.1 Module Map
 
-| # | Module | Access |
-|---|---|---|
-| 1 | Dashboard | All team |
-| 2 | Members | Admin, Organizer |
-| 3 | Applications | Admin, Organizer |
-| 4 | Events | Admin, Organizer |
-| 5 | Hackathons | Admin, Hackathon Manager |
-| 6 | Gallery | Admin, Organizer, Content Manager |
-| 7 | Projects | Admin, Organizer |
-| 8 | Resources | Admin, Content Manager |
-| 9 | Blog / CMS | Admin, Content Manager |
-| 10 | Team | Admin |
-| 11 | Partners | Admin |
-| 12 | Certificates | Admin, Organizer |
-| 13 | Announcements | Admin, Organizer |
-| 14 | Website Content | Admin, Content Manager |
-| 15 | Analytics | Admin, Organizer |
-| 16 | Reports | Admin |
-| 17 | Settings | Admin |
-| 18 | Audit Logs | Admin |
+| #   | Module          | Access                            |
+| --- | --------------- | --------------------------------- |
+| 1   | Dashboard       | All team                          |
+| 2   | Members         | Admin, Organizer                  |
+| 3   | Applications    | Admin, Organizer                  |
+| 4   | Events          | Admin, Organizer                  |
+| 5   | Hackathons      | Admin, Hackathon Manager          |
+| 6   | Gallery         | Admin, Organizer, Content Manager |
+| 7   | Projects        | Admin, Organizer                  |
+| 8   | Resources       | Admin, Content Manager            |
+| 9   | Blog / CMS      | Admin, Content Manager            |
+| 10  | Team            | Admin                             |
+| 11  | Partners        | Admin                             |
+| 12  | Certificates    | Admin, Organizer                  |
+| 13  | Announcements   | Admin, Organizer                  |
+| 14  | Website Content | Admin, Content Manager            |
+| 15  | Analytics       | Admin, Organizer                  |
+| 16  | Reports         | Admin                             |
+| 17  | Settings        | Admin                             |
+| 18  | Audit Logs      | Admin                             |
 
 ---
 
@@ -494,12 +494,12 @@ Submit → Backend inbox → Desktop app view.
 
 ### Hero Stats
 
-| Metric | Source |
-|---|---|
-| Total Members | Users count (active) |
-| Upcoming Events | Events (published, future) |
-| Active Hackathons | Hackathons (open/live) |
-| Pending Approvals | Applications (pending) |
+| Metric              | Source                      |
+| ------------------- | --------------------------- |
+| Total Members       | Users count (active)        |
+| Upcoming Events     | Events (published, future)  |
+| Active Hackathons   | Hackathons (open/live)      |
+| Pending Approvals   | Applications (pending)      |
 | Submissions Pending | Submissions (review needed) |
 
 ### Panels
@@ -514,14 +514,14 @@ Submit → Backend inbox → Desktop app view.
 
 ### Features
 
-| Feature | Description |
-|---|---|
-| View all members | Table with search, filter, sort |
-| Member detail | Full profile, activity history |
-| Role assignment | Change role (dropdown) |
-| Status management | Active / Inactive toggle |
+| Feature               | Description                               |
+| --------------------- | ----------------------------------------- |
+| View all members      | Table with search, filter, sort           |
+| Member detail         | Full profile, activity history            |
+| Role assignment       | Change role (dropdown)                    |
+| Status management     | Active / Inactive toggle                  |
 | Participation history | Events attended, hackathons, certificates |
-| Bulk actions | Export, role change, status change |
+| Bulk actions          | Export, role change, status change        |
 
 ### Member Lifecycle
 
@@ -534,13 +534,13 @@ Application (Pending) → Approved → Active Member → Inactive (optional)
 
 ## 2.4 Applications Management
 
-| Feature | Description |
-|---|---|
-| View pending | Table sorted by date |
-| Application detail | All form fields |
-| Approve | Creates User + sends welcome email |
-| Reject | Sends rejection email |
-| Notes | Internal reviewer notes |
+| Feature            | Description                        |
+| ------------------ | ---------------------------------- |
+| View pending       | Table sorted by date               |
+| Application detail | All form fields                    |
+| Approve            | Creates User + sends welcome email |
+| Reject             | Sends rejection email              |
+| Notes              | Internal reviewer notes            |
 
 ---
 
@@ -548,14 +548,14 @@ Application (Pending) → Approved → Active Member → Inactive (optional)
 
 ### Features
 
-| Feature | Description |
-|---|---|
-| Create event | Full form: title, description, date, location, capacity, banner |
-| Edit event | Update any field |
-| Publish / Unpublish | Toggle visibility |
-| Manage registrations | View, export, cancel |
-| Mark attendance | Checklist / bulk |
-| Post-event | Photos, feedback, certificates |
+| Feature              | Description                                                     |
+| -------------------- | --------------------------------------------------------------- |
+| Create event         | Full form: title, description, date, location, capacity, banner |
+| Edit event           | Update any field                                                |
+| Publish / Unpublish  | Toggle visibility                                               |
+| Manage registrations | View, export, cancel                                            |
+| Mark attendance      | Checklist / bulk                                                |
+| Post-event           | Photos, feedback, certificates                                  |
 
 ### Event Lifecycle
 
@@ -565,23 +565,23 @@ Draft → Published → Live (on event day) → Completed
 
 ### Event Form Fields
 
-| Field | Type | Required |
-|---|---|---|
-| Title | Text | ✅ |
-| Slug | Auto-gen / manual | ✅ |
-| Description | Rich text | ✅ |
-| Type | Online / Offline / Hybrid | ✅ |
-| Category | Select | ✅ |
-| Date / Time | DateTime | ✅ |
-| End Date / Time | DateTime | ✅ |
-| Location | Text + map | Conditional |
-| Online Link | URL | Conditional |
-| Capacity | Number | ❌ |
-| Banner | Image upload | ✅ |
-| Speakers | Multi-select / add | ❌ |
-| Agenda | Timeline items | ❌ |
-| Tags | Tags | ❌ |
-| Status | Select | ✅ |
+| Field           | Type                      | Required    |
+| --------------- | ------------------------- | ----------- |
+| Title           | Text                      | ✅          |
+| Slug            | Auto-gen / manual         | ✅          |
+| Description     | Rich text                 | ✅          |
+| Type            | Online / Offline / Hybrid | ✅          |
+| Category        | Select                    | ✅          |
+| Date / Time     | DateTime                  | ✅          |
+| End Date / Time | DateTime                  | ✅          |
+| Location        | Text + map                | Conditional |
+| Online Link     | URL                       | Conditional |
+| Capacity        | Number                    | ❌          |
+| Banner          | Image upload              | ✅          |
+| Speakers        | Multi-select / add        | ❌          |
+| Agenda          | Timeline items            | ❌          |
+| Tags            | Tags                      | ❌          |
+| Status          | Select                    | ✅          |
 
 ---
 
@@ -589,15 +589,15 @@ Draft → Published → Live (on event day) → Completed
 
 ### Features
 
-| Feature | Description |
-|---|---|
-| Create hackathon | Full wizard |
-| Manage tracks | CRUD tracks |
-| Assign judges | Per track |
-| View teams | Team details, members |
-| View submissions | Submission review |
-| Manage timeline | Phase dates |
-| Announce results | Winners per track |
+| Feature          | Description           |
+| ---------------- | --------------------- |
+| Create hackathon | Full wizard           |
+| Manage tracks    | CRUD tracks           |
+| Assign judges    | Per track             |
+| View teams       | Team details, members |
+| View submissions | Submission review     |
+| Manage timeline  | Phase dates           |
+| Announce results | Winners per track     |
 
 ### Hackathon Lifecycle
 
@@ -607,133 +607,133 @@ Draft → Open (registration) → Live (hacking) → Judging → Completed
 
 ### Hackathon Form Fields
 
-| Field | Type |
-|---|---|
-| Title | Text |
-| Slug | Auto-gen |
-| Description | Rich text |
-| Rules | Rich text |
-| Registration Start/End | DateTime |
-| Hacking Start/End | DateTime |
-| Judging Start/End | DateTime |
-| Banner | Image |
-| Tracks | Sub-form array |
-| Prizes | Sub-form array |
-| Max Team Size | Number |
-| Min Team Size | Number |
+| Field                  | Type           |
+| ---------------------- | -------------- |
+| Title                  | Text           |
+| Slug                   | Auto-gen       |
+| Description            | Rich text      |
+| Rules                  | Rich text      |
+| Registration Start/End | DateTime       |
+| Hacking Start/End      | DateTime       |
+| Judging Start/End      | DateTime       |
+| Banner                 | Image          |
+| Tracks                 | Sub-form array |
+| Prizes                 | Sub-form array |
+| Max Team Size          | Number         |
+| Min Team Size          | Number         |
 
 ### Track Fields
 
-| Field | Type |
-|---|---|
-| Name | Text |
-| Description | Text |
-| Prizes | Array |
-| Judges | Member references |
+| Field       | Type              |
+| ----------- | ----------------- |
+| Name        | Text              |
+| Description | Text              |
+| Prizes      | Array             |
+| Judges      | Member references |
 
 ---
 
 ## 2.7 Gallery Management
 
-| Feature | Description |
-|---|---|
-| Create album | Title, description, event link, cover |
-| Upload photos | Bulk upload to Cloudinary |
-| Manage photos | Reorder, delete, caption |
-| Tag events | Link album to event |
+| Feature       | Description                           |
+| ------------- | ------------------------------------- |
+| Create album  | Title, description, event link, cover |
+| Upload photos | Bulk upload to Cloudinary             |
+| Manage photos | Reorder, delete, caption              |
+| Tag events    | Link album to event                   |
 
 ---
 
 ## 2.8 Projects Management
 
-| Feature | Description |
-|---|---|
-| Add project | Full form |
-| Edit project | Update fields |
+| Feature             | Description       |
+| ------------------- | ----------------- |
+| Add project         | Full form         |
+| Edit project        | Update fields     |
 | Assign contributors | Member references |
-| Feature toggle | Mark as featured |
-| Status | Active / Archived |
+| Feature toggle      | Mark as featured  |
+| Status              | Active / Archived |
 
 ---
 
 ## 2.9 Resources Management
 
-| Feature | Description |
-|---|---|
-| Upload resource | File + metadata |
-| Categorize | Type, category, difficulty |
-| Edit metadata | Update fields |
-| Publish / Archive | Toggle visibility |
+| Feature           | Description                |
+| ----------------- | -------------------------- |
+| Upload resource   | File + metadata            |
+| Categorize        | Type, category, difficulty |
+| Edit metadata     | Update fields              |
+| Publish / Archive | Toggle visibility          |
 
 ---
 
 ## 2.10 Blog CMS
 
-| Feature | Description |
-|---|---|
-| Create post | Rich text editor |
-| Draft / Publish | Status toggle |
-| Tags | Manage tags |
-| Featured | Mark featured |
-| Author | Assign author |
-| SEO | Slug, meta description |
+| Feature         | Description            |
+| --------------- | ---------------------- |
+| Create post     | Rich text editor       |
+| Draft / Publish | Status toggle          |
+| Tags            | Manage tags            |
+| Featured        | Mark featured          |
+| Author          | Assign author          |
+| SEO             | Slug, meta description |
 
 ---
 
 ## 2.11 Team Management
 
-| Feature | Description |
-|---|---|
-| Add team member | Profile from members |
-| Set display role | Title for public display |
-| Set group | Leadership / Organizer / Volunteer |
-| Order | Display order |
-| Active toggle | Show/hide on website |
+| Feature          | Description                        |
+| ---------------- | ---------------------------------- |
+| Add team member  | Profile from members               |
+| Set display role | Title for public display           |
+| Set group        | Leadership / Organizer / Volunteer |
+| Order            | Display order                      |
+| Active toggle    | Show/hide on website               |
 
 ---
 
 ## 2.12 Partners Management
 
-| Feature | Description |
-|---|---|
-| Add partner | Logo, name, description, URL |
-| Set tier | Platinum / Gold / Silver / Community |
-| Order | Display order per tier |
-| Active toggle | Show/hide |
+| Feature       | Description                          |
+| ------------- | ------------------------------------ |
+| Add partner   | Logo, name, description, URL         |
+| Set tier      | Platinum / Gold / Silver / Community |
+| Order         | Display order per tier               |
+| Active toggle | Show/hide                            |
 
 ---
 
 ## 2.13 Certificates Management
 
-| Feature | Description |
-|---|---|
-| Certificate templates | Design templates with placeholders |
-| Assign certificates | Per event / hackathon |
-| Bulk generate | Generate for all attendees / winners |
-| Download | PDF export |
-| Verification | Public verification URL |
+| Feature               | Description                          |
+| --------------------- | ------------------------------------ |
+| Certificate templates | Design templates with placeholders   |
+| Assign certificates   | Per event / hackathon                |
+| Bulk generate         | Generate for all attendees / winners |
+| Download              | PDF export                           |
+| Verification          | Public verification URL              |
 
 ### Certificate Types
 
-| Type | Trigger |
-|---|---|
-| Event Attendance | Attendance marked |
-| Event Speaker | Manual assign |
-| Hackathon Participation | Team submitted |
-| Hackathon Winner | Results announced |
-| Volunteer | Manual assign |
-| Special Recognition | Manual assign |
+| Type                    | Trigger           |
+| ----------------------- | ----------------- |
+| Event Attendance        | Attendance marked |
+| Event Speaker           | Manual assign     |
+| Hackathon Participation | Team submitted    |
+| Hackathon Winner        | Results announced |
+| Volunteer               | Manual assign     |
+| Special Recognition     | Manual assign     |
 
 ---
 
 ## 2.14 Announcements
 
-| Feature | Description |
-|---|---|
-| Create | Title, body, priority, target audience |
-| Publish | Visible on member dashboard |
-| Archive | Remove from active |
-| Pin | Sticky announcement |
+| Feature | Description                            |
+| ------- | -------------------------------------- |
+| Create  | Title, body, priority, target audience |
+| Publish | Visible on member dashboard            |
+| Archive | Remove from active                     |
+| Pin     | Sticky announcement                    |
 
 ---
 
@@ -741,15 +741,15 @@ Draft → Open (registration) → Live (hacking) → Judging → Completed
 
 ### Editable Blocks
 
-| Block | Fields |
-|---|---|
-| Hero Section | Title, subtitle, CTA text, CTA link, background image |
-| Community Intro | Title, body, image |
-| What We Do | Cards (icon, title, description) |
-| Impact Stats | Metric cards (label, value, icon) |
-| Testimonials | Array (name, role, quote, photo) |
-| About Sections | Mission, vision, story, values |
-| Footer | Links, social URLs, contact info |
+| Block           | Fields                                                |
+| --------------- | ----------------------------------------------------- |
+| Hero Section    | Title, subtitle, CTA text, CTA link, background image |
+| Community Intro | Title, body, image                                    |
+| What We Do      | Cards (icon, title, description)                      |
+| Impact Stats    | Metric cards (label, value, icon)                     |
+| Testimonials    | Array (name, role, quote, photo)                      |
+| About Sections  | Mission, vision, story, values                        |
+| Footer          | Links, social URLs, contact info                      |
 
 ---
 
@@ -757,12 +757,12 @@ Draft → Open (registration) → Live (hacking) → Judging → Completed
 
 ### Dashboards
 
-| Dashboard | Metrics |
-|---|---|
-| **Members** | Growth over time, active vs inactive, role distribution, skill cloud |
-| **Events** | Events per month, attendance rates, capacity utilization, popular categories |
-| **Hackathons** | Participation, team sizes, submission rates, track distribution |
-| **Content** | Blog views (if tracked), resource downloads, gallery views |
+| Dashboard      | Metrics                                                                      |
+| -------------- | ---------------------------------------------------------------------------- |
+| **Members**    | Growth over time, active vs inactive, role distribution, skill cloud         |
+| **Events**     | Events per month, attendance rates, capacity utilization, popular categories |
+| **Hackathons** | Participation, team sizes, submission rates, track distribution              |
+| **Content**    | Blog views (if tracked), resource downloads, gallery views                   |
 
 ### Charts
 
@@ -775,38 +775,38 @@ Draft → Open (registration) → Live (hacking) → Judging → Completed
 
 ## 2.17 Reports
 
-| Report | Content | Export |
-|---|---|---|
-| Event Report | Attendees, stats, feedback | CSV, PDF |
+| Report           | Content                             | Export   |
+| ---------------- | ----------------------------------- | -------- |
+| Event Report     | Attendees, stats, feedback          | CSV, PDF |
 | Hackathon Report | Teams, submissions, scores, winners | CSV, PDF |
-| Members Report | Full roster, roles, activity | CSV |
-| Annual Summary | Yearly metrics compilation | PDF |
+| Members Report   | Full roster, roles, activity        | CSV      |
+| Annual Summary   | Yearly metrics compilation          | PDF      |
 
 ---
 
 ## 2.18 Settings
 
-| Setting | Description |
-|---|---|
-| Community Info | Name, description, logo, social links |
-| Email Templates | Welcome, rejection, event, certificate |
-| Roles & Permissions | Configure RBAC |
-| API Keys | Cloudinary, email service |
-| Feature Flags | Toggle platform features |
+| Setting             | Description                            |
+| ------------------- | -------------------------------------- |
+| Community Info      | Name, description, logo, social links  |
+| Email Templates     | Welcome, rejection, event, certificate |
+| Roles & Permissions | Configure RBAC                         |
+| API Keys            | Cloudinary, email service              |
+| Feature Flags       | Toggle platform features               |
 
 ---
 
 ## 2.19 Audit Logs
 
-| Field | Description |
-|---|---|
-| Timestamp | When |
-| Actor | Who (user reference) |
-| Action | What (create, update, delete) |
-| Resource | Which entity |
-| Resource ID | Which record |
-| Details | Change diff / description |
-| IP Address | Where (optional) |
+| Field       | Description                   |
+| ----------- | ----------------------------- |
+| Timestamp   | When                          |
+| Actor       | Who (user reference)          |
+| Action      | What (create, update, delete) |
+| Resource    | Which entity                  |
+| Resource ID | Which record                  |
+| Details     | Change diff / description     |
+| IP Address  | Where (optional)              |
 
 - **Filterable** by actor, action, resource, date range
 - **Searchable**
@@ -856,15 +856,15 @@ audit/          → Audit trail
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| POST | `/api/auth/login` | Login with email/password | Public |
-| POST | `/api/auth/register` | Self-register (creates application) | Public |
-| POST | `/api/auth/refresh` | Refresh access token | Authenticated |
-| POST | `/api/auth/logout` | Invalidate refresh token | Authenticated |
-| POST | `/api/auth/forgot-password` | Send reset email | Public |
-| POST | `/api/auth/reset-password` | Reset with token | Public |
-| GET | `/api/auth/me` | Get current user | Authenticated |
+| Method | Route                       | Description                         | Access        |
+| ------ | --------------------------- | ----------------------------------- | ------------- |
+| POST   | `/api/auth/login`           | Login with email/password           | Public        |
+| POST   | `/api/auth/register`        | Self-register (creates application) | Public        |
+| POST   | `/api/auth/refresh`         | Refresh access token                | Authenticated |
+| POST   | `/api/auth/logout`          | Invalidate refresh token            | Authenticated |
+| POST   | `/api/auth/forgot-password` | Send reset email                    | Public        |
+| POST   | `/api/auth/reset-password`  | Reset with token                    | Public        |
+| GET    | `/api/auth/me`              | Get current user                    | Authenticated |
 
 ### Auth Flow
 
@@ -882,15 +882,15 @@ Refresh Token: 7d expiry, stored in httpOnly cookie + DB
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/users` | List users (paginated) | Admin, Organizer |
-| GET | `/api/users/:id` | Get user detail | Admin, Organizer, Self |
-| PUT | `/api/users/:id` | Update user | Admin, Self |
-| PATCH | `/api/users/:id/role` | Change role | Admin |
-| PATCH | `/api/users/:id/status` | Change status | Admin |
-| DELETE | `/api/users/:id` | Soft delete | Admin |
-| GET | `/api/users/:id/activity` | User activity history | Admin, Self |
+| Method | Route                     | Description            | Access                 |
+| ------ | ------------------------- | ---------------------- | ---------------------- |
+| GET    | `/api/users`              | List users (paginated) | Admin, Organizer       |
+| GET    | `/api/users/:id`          | Get user detail        | Admin, Organizer, Self |
+| PUT    | `/api/users/:id`          | Update user            | Admin, Self            |
+| PATCH  | `/api/users/:id/role`     | Change role            | Admin                  |
+| PATCH  | `/api/users/:id/status`   | Change status          | Admin                  |
+| DELETE | `/api/users/:id`          | Soft delete            | Admin                  |
+| GET    | `/api/users/:id/activity` | User activity history  | Admin, Self            |
 
 ### User Schema
 
@@ -908,7 +908,7 @@ interface IUser {
   college?: string;
   company?: string;
   role: UserRole;
-  status: 'active' | 'inactive' | 'suspended';
+  status: "active" | "inactive" | "suspended";
   skills: string[];
   socialLinks: {
     github?: string;
@@ -928,13 +928,13 @@ interface IUser {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| POST | `/api/applications` | Submit application | Public |
-| GET | `/api/applications` | List applications | Admin, Organizer |
-| GET | `/api/applications/:id` | Get detail | Admin, Organizer |
-| PATCH | `/api/applications/:id/approve` | Approve | Admin, Organizer |
-| PATCH | `/api/applications/:id/reject` | Reject | Admin, Organizer |
+| Method | Route                           | Description        | Access           |
+| ------ | ------------------------------- | ------------------ | ---------------- |
+| POST   | `/api/applications`             | Submit application | Public           |
+| GET    | `/api/applications`             | List applications  | Admin, Organizer |
+| GET    | `/api/applications/:id`         | Get detail         | Admin, Organizer |
+| PATCH  | `/api/applications/:id/approve` | Approve            | Admin, Organizer |
+| PATCH  | `/api/applications/:id/reject`  | Reject             | Admin, Organizer |
 
 ### Application Schema
 
@@ -952,8 +952,8 @@ interface IApplication {
   portfolioUrl?: string;
   githubUrl?: string;
   linkedinUrl?: string;
-  status: 'pending' | 'approved' | 'rejected';
-  reviewedBy?: ObjectId;  // User ref
+  status: "pending" | "approved" | "rejected";
+  reviewedBy?: ObjectId; // User ref
   reviewNotes?: string;
   reviewedAt?: Date;
   createdAt: Date;
@@ -967,19 +967,19 @@ interface IApplication {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/events` | List events (public) | Public |
-| GET | `/api/events/:slug` | Get event detail | Public |
-| POST | `/api/events` | Create event | Admin, Organizer |
-| PUT | `/api/events/:id` | Update event | Admin, Organizer |
-| DELETE | `/api/events/:id` | Delete event | Admin |
-| PATCH | `/api/events/:id/status` | Change status | Admin, Organizer |
-| POST | `/api/events/:id/register` | Register for event | Member |
-| DELETE | `/api/events/:id/register` | Cancel registration | Member |
-| GET | `/api/events/:id/registrations` | List registrations | Admin, Organizer |
-| POST | `/api/events/:id/attendance` | Mark attendance (bulk) | Admin, Organizer |
-| GET | `/api/events/:id/attendance` | Get attendance | Admin, Organizer |
+| Method | Route                           | Description            | Access           |
+| ------ | ------------------------------- | ---------------------- | ---------------- |
+| GET    | `/api/events`                   | List events (public)   | Public           |
+| GET    | `/api/events/:slug`             | Get event detail       | Public           |
+| POST   | `/api/events`                   | Create event           | Admin, Organizer |
+| PUT    | `/api/events/:id`               | Update event           | Admin, Organizer |
+| DELETE | `/api/events/:id`               | Delete event           | Admin            |
+| PATCH  | `/api/events/:id/status`        | Change status          | Admin, Organizer |
+| POST   | `/api/events/:id/register`      | Register for event     | Member           |
+| DELETE | `/api/events/:id/register`      | Cancel registration    | Member           |
+| GET    | `/api/events/:id/registrations` | List registrations     | Admin, Organizer |
+| POST   | `/api/events/:id/attendance`    | Mark attendance (bulk) | Admin, Organizer |
+| GET    | `/api/events/:id/attendance`    | Get attendance         | Admin, Organizer |
 
 ### Event Schema
 
@@ -989,7 +989,7 @@ interface IEvent {
   title: string;
   slug: string;
   description: string;
-  type: 'online' | 'offline' | 'hybrid';
+  type: "online" | "offline" | "hybrid";
   category: string;
   startDate: Date;
   endDate: Date;
@@ -1001,7 +1001,7 @@ interface IEvent {
   speakers: ISpeaker[];
   agenda: IAgendaItem[];
   tags: string[];
-  status: 'draft' | 'published' | 'live' | 'completed' | 'cancelled';
+  status: "draft" | "published" | "live" | "completed" | "cancelled";
   registrationCount: number;
   createdBy: ObjectId;
   createdAt: Date;
@@ -1031,7 +1031,7 @@ interface IRegistration {
   _id: ObjectId;
   event: ObjectId;
   user: ObjectId;
-  status: 'registered' | 'cancelled' | 'waitlisted';
+  status: "registered" | "cancelled" | "waitlisted";
   registeredAt: Date;
   cancelledAt?: Date;
 }
@@ -1044,7 +1044,7 @@ interface IAttendance {
   _id: ObjectId;
   event: ObjectId;
   user: ObjectId;
-  status: 'present' | 'absent';
+  status: "present" | "absent";
   markedBy: ObjectId;
   markedAt: Date;
 }
@@ -1056,18 +1056,18 @@ interface IAttendance {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/hackathons` | List hackathons | Public |
-| GET | `/api/hackathons/:slug` | Get detail | Public |
-| POST | `/api/hackathons` | Create | Admin, Hackathon Manager |
-| PUT | `/api/hackathons/:id` | Update | Admin, Hackathon Manager |
-| DELETE | `/api/hackathons/:id` | Delete | Admin |
-| PATCH | `/api/hackathons/:id/status` | Change status | Admin, Hackathon Manager |
-| POST | `/api/hackathons/:id/register` | Register | Member |
-| GET | `/api/hackathons/:id/teams` | List teams | Public (after open) |
-| GET | `/api/hackathons/:id/submissions` | List submissions | Admin, HM, Judges |
-| GET | `/api/hackathons/:id/results` | Get results | Public (after judging) |
+| Method | Route                             | Description      | Access                   |
+| ------ | --------------------------------- | ---------------- | ------------------------ |
+| GET    | `/api/hackathons`                 | List hackathons  | Public                   |
+| GET    | `/api/hackathons/:slug`           | Get detail       | Public                   |
+| POST   | `/api/hackathons`                 | Create           | Admin, Hackathon Manager |
+| PUT    | `/api/hackathons/:id`             | Update           | Admin, Hackathon Manager |
+| DELETE | `/api/hackathons/:id`             | Delete           | Admin                    |
+| PATCH  | `/api/hackathons/:id/status`      | Change status    | Admin, Hackathon Manager |
+| POST   | `/api/hackathons/:id/register`    | Register         | Member                   |
+| GET    | `/api/hackathons/:id/teams`       | List teams       | Public (after open)      |
+| GET    | `/api/hackathons/:id/submissions` | List submissions | Admin, HM, Judges        |
+| GET    | `/api/hackathons/:id/results`     | Get results      | Public (after judging)   |
 
 ### Hackathon Schema
 
@@ -1089,7 +1089,7 @@ interface IHackathon {
   maxTeamSize: number;
   tracks: ITrack[];
   prizes: IPrize[];
-  status: 'draft' | 'open' | 'live' | 'judging' | 'completed';
+  status: "draft" | "open" | "live" | "judging" | "completed";
   createdBy: ObjectId;
   createdAt: Date;
   updatedAt: Date;
@@ -1116,14 +1116,14 @@ interface IPrize {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| POST | `/api/teams` | Create team | Member |
-| GET | `/api/teams/:id` | Get team | Team member, Admin |
-| PUT | `/api/teams/:id` | Update team | Team leader |
-| POST | `/api/teams/:id/join` | Join team | Member |
-| POST | `/api/teams/:id/leave` | Leave team | Team member |
-| DELETE | `/api/teams/:id/members/:userId` | Remove member | Team leader |
+| Method | Route                            | Description   | Access             |
+| ------ | -------------------------------- | ------------- | ------------------ |
+| POST   | `/api/teams`                     | Create team   | Member             |
+| GET    | `/api/teams/:id`                 | Get team      | Team member, Admin |
+| PUT    | `/api/teams/:id`                 | Update team   | Team leader        |
+| POST   | `/api/teams/:id/join`            | Join team     | Member             |
+| POST   | `/api/teams/:id/leave`           | Leave team    | Team member        |
+| DELETE | `/api/teams/:id/members/:userId` | Remove member | Team leader        |
 
 ### Team Schema
 
@@ -1137,7 +1137,7 @@ interface ITeam {
   leader: ObjectId;
   members: ObjectId[];
   inviteCode: string;
-  status: 'forming' | 'locked' | 'submitted';
+  status: "forming" | "locked" | "submitted";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -1149,12 +1149,12 @@ interface ITeam {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| POST | `/api/submissions` | Submit project | Team leader |
-| GET | `/api/submissions/:id` | Get submission | Team, Admin, Judge |
-| PUT | `/api/submissions/:id` | Update submission | Team leader |
-| PATCH | `/api/submissions/:id/lock` | Lock submission | Admin, HM |
+| Method | Route                       | Description       | Access             |
+| ------ | --------------------------- | ----------------- | ------------------ |
+| POST   | `/api/submissions`          | Submit project    | Team leader        |
+| GET    | `/api/submissions/:id`      | Get submission    | Team, Admin, Judge |
+| PUT    | `/api/submissions/:id`      | Update submission | Team leader        |
+| PATCH  | `/api/submissions/:id/lock` | Lock submission   | Admin, HM          |
 
 ### Submission Schema
 
@@ -1171,7 +1171,7 @@ interface ISubmission {
   demoUrl?: string;
   videoUrl?: string;
   screenshots: string[];
-  status: 'draft' | 'submitted' | 'locked';
+  status: "draft" | "submitted" | "locked";
   submittedAt?: Date;
   createdAt: Date;
   updatedAt: Date;
@@ -1184,14 +1184,14 @@ interface ISubmission {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| POST | `/api/judges` | Assign judge | Admin, HM |
-| GET | `/api/judges/hackathon/:id` | List judges | Admin, HM |
-| DELETE | `/api/judges/:id` | Remove judge | Admin, HM |
-| POST | `/api/scores` | Submit score | Judge |
-| GET | `/api/scores/submission/:id` | Get scores | Admin, HM |
-| GET | `/api/scores/hackathon/:id/summary` | Score summary | Admin, HM |
+| Method | Route                               | Description   | Access    |
+| ------ | ----------------------------------- | ------------- | --------- |
+| POST   | `/api/judges`                       | Assign judge  | Admin, HM |
+| GET    | `/api/judges/hackathon/:id`         | List judges   | Admin, HM |
+| DELETE | `/api/judges/:id`                   | Remove judge  | Admin, HM |
+| POST   | `/api/scores`                       | Submit score  | Judge     |
+| GET    | `/api/scores/submission/:id`        | Get scores    | Admin, HM |
+| GET    | `/api/scores/hackathon/:id/summary` | Score summary | Admin, HM |
 
 ### Judge Schema
 
@@ -1232,15 +1232,15 @@ interface IScore {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/gallery/albums` | List albums | Public |
-| GET | `/api/gallery/albums/:id` | Get album with photos | Public |
-| POST | `/api/gallery/albums` | Create album | Admin, Organizer, CM |
-| PUT | `/api/gallery/albums/:id` | Update album | Admin, Organizer, CM |
-| DELETE | `/api/gallery/albums/:id` | Delete album | Admin |
-| POST | `/api/gallery/albums/:id/photos` | Upload photos | Admin, Organizer, CM |
-| DELETE | `/api/gallery/photos/:id` | Delete photo | Admin, Organizer, CM |
+| Method | Route                            | Description           | Access               |
+| ------ | -------------------------------- | --------------------- | -------------------- |
+| GET    | `/api/gallery/albums`            | List albums           | Public               |
+| GET    | `/api/gallery/albums/:id`        | Get album with photos | Public               |
+| POST   | `/api/gallery/albums`            | Create album          | Admin, Organizer, CM |
+| PUT    | `/api/gallery/albums/:id`        | Update album          | Admin, Organizer, CM |
+| DELETE | `/api/gallery/albums/:id`        | Delete album          | Admin                |
+| POST   | `/api/gallery/albums/:id/photos` | Upload photos         | Admin, Organizer, CM |
+| DELETE | `/api/gallery/photos/:id`        | Delete photo          | Admin, Organizer, CM |
 
 ### Album Schema
 
@@ -1279,13 +1279,13 @@ interface IPhoto {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/projects` | List projects | Public |
-| GET | `/api/projects/:id` | Get project | Public |
-| POST | `/api/projects` | Create project | Admin, Organizer |
-| PUT | `/api/projects/:id` | Update project | Admin, Organizer |
-| DELETE | `/api/projects/:id` | Delete project | Admin |
+| Method | Route               | Description    | Access           |
+| ------ | ------------------- | -------------- | ---------------- |
+| GET    | `/api/projects`     | List projects  | Public           |
+| GET    | `/api/projects/:id` | Get project    | Public           |
+| POST   | `/api/projects`     | Create project | Admin, Organizer |
+| PUT    | `/api/projects/:id` | Update project | Admin, Organizer |
+| DELETE | `/api/projects/:id` | Delete project | Admin            |
 
 ### Project Schema
 
@@ -1304,7 +1304,7 @@ interface IProject {
   };
   contributors: ObjectId[];
   featured: boolean;
-  status: 'active' | 'archived';
+  status: "active" | "archived";
   createdBy: ObjectId;
   createdAt: Date;
   updatedAt: Date;
@@ -1317,13 +1317,13 @@ interface IProject {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/resources` | List resources | Public |
-| GET | `/api/resources/:id` | Get resource | Public |
-| POST | `/api/resources` | Create resource | Admin, CM |
-| PUT | `/api/resources/:id` | Update resource | Admin, CM |
-| DELETE | `/api/resources/:id` | Delete resource | Admin |
+| Method | Route                | Description     | Access    |
+| ------ | -------------------- | --------------- | --------- |
+| GET    | `/api/resources`     | List resources  | Public    |
+| GET    | `/api/resources/:id` | Get resource    | Public    |
+| POST   | `/api/resources`     | Create resource | Admin, CM |
+| PUT    | `/api/resources/:id` | Update resource | Admin, CM |
+| DELETE | `/api/resources/:id` | Delete resource | Admin     |
 
 ### Resource Schema
 
@@ -1332,9 +1332,9 @@ interface IResource {
   _id: ObjectId;
   title: string;
   description: string;
-  type: 'document' | 'video' | 'slides' | 'repository' | 'link';
+  type: "document" | "video" | "slides" | "repository" | "link";
   category: string;
-  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  difficulty: "beginner" | "intermediate" | "advanced";
   url: string;
   fileUrl?: string;
   thumbnail?: string;
@@ -1352,15 +1352,15 @@ interface IResource {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/posts` | List posts (published) | Public |
-| GET | `/api/posts/:slug` | Get post | Public |
-| GET | `/api/posts/drafts` | List drafts | Admin, CM |
-| POST | `/api/posts` | Create post | Admin, CM |
-| PUT | `/api/posts/:id` | Update post | Admin, CM |
-| DELETE | `/api/posts/:id` | Delete post | Admin |
-| PATCH | `/api/posts/:id/publish` | Publish | Admin, CM |
+| Method | Route                    | Description            | Access    |
+| ------ | ------------------------ | ---------------------- | --------- |
+| GET    | `/api/posts`             | List posts (published) | Public    |
+| GET    | `/api/posts/:slug`       | Get post               | Public    |
+| GET    | `/api/posts/drafts`      | List drafts            | Admin, CM |
+| POST   | `/api/posts`             | Create post            | Admin, CM |
+| PUT    | `/api/posts/:id`         | Update post            | Admin, CM |
+| DELETE | `/api/posts/:id`         | Delete post            | Admin     |
+| PATCH  | `/api/posts/:id/publish` | Publish                | Admin, CM |
 
 ### Post Schema
 
@@ -1369,14 +1369,14 @@ interface IPost {
   _id: ObjectId;
   title: string;
   slug: string;
-  content: string;       // Rich text / MDX
+  content: string; // Rich text / MDX
   excerpt: string;
   coverImage?: string;
   author: ObjectId;
   tags: string[];
   category?: string;
   featured: boolean;
-  status: 'draft' | 'published';
+  status: "draft" | "published";
   publishedAt?: Date;
   createdAt: Date;
   updatedAt: Date;
@@ -1389,13 +1389,13 @@ interface IPost {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/team-members` | List team members | Public |
-| POST | `/api/team-members` | Add team member | Admin |
-| PUT | `/api/team-members/:id` | Update | Admin |
-| DELETE | `/api/team-members/:id` | Remove | Admin |
-| PATCH | `/api/team-members/reorder` | Reorder | Admin |
+| Method | Route                       | Description       | Access |
+| ------ | --------------------------- | ----------------- | ------ |
+| GET    | `/api/team-members`         | List team members | Public |
+| POST   | `/api/team-members`         | Add team member   | Admin  |
+| PUT    | `/api/team-members/:id`     | Update            | Admin  |
+| DELETE | `/api/team-members/:id`     | Remove            | Admin  |
+| PATCH  | `/api/team-members/reorder` | Reorder           | Admin  |
 
 ### TeamMember Schema
 
@@ -1404,7 +1404,7 @@ interface ITeamMember {
   _id: ObjectId;
   user: ObjectId;
   displayRole: string;
-  group: 'leadership' | 'organizer' | 'volunteer';
+  group: "leadership" | "organizer" | "volunteer";
   bio?: string;
   order: number;
   active: boolean;
@@ -1419,12 +1419,12 @@ interface ITeamMember {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/partners` | List partners | Public |
-| POST | `/api/partners` | Add partner | Admin |
-| PUT | `/api/partners/:id` | Update | Admin |
-| DELETE | `/api/partners/:id` | Remove | Admin |
+| Method | Route               | Description   | Access |
+| ------ | ------------------- | ------------- | ------ |
+| GET    | `/api/partners`     | List partners | Public |
+| POST   | `/api/partners`     | Add partner   | Admin  |
+| PUT    | `/api/partners/:id` | Update        | Admin  |
+| DELETE | `/api/partners/:id` | Remove        | Admin  |
 
 ### Partner Schema
 
@@ -1435,7 +1435,7 @@ interface IPartner {
   logo: string;
   description?: string;
   website?: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'community';
+  tier: "platinum" | "gold" | "silver" | "community";
   order: number;
   active: boolean;
   createdAt: Date;
@@ -1449,15 +1449,15 @@ interface IPartner {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/certificates` | List certificates | Admin, Organizer |
-| GET | `/api/certificates/my` | My certificates | Member |
-| GET | `/api/certificates/:id` | Get certificate | Owner, Admin |
-| GET | `/api/certificates/verify/:code` | Public verify | Public |
-| POST | `/api/certificates` | Issue certificate | Admin, Organizer |
-| POST | `/api/certificates/bulk` | Bulk issue | Admin, Organizer |
-| DELETE | `/api/certificates/:id` | Revoke | Admin |
+| Method | Route                            | Description       | Access           |
+| ------ | -------------------------------- | ----------------- | ---------------- |
+| GET    | `/api/certificates`              | List certificates | Admin, Organizer |
+| GET    | `/api/certificates/my`           | My certificates   | Member           |
+| GET    | `/api/certificates/:id`          | Get certificate   | Owner, Admin     |
+| GET    | `/api/certificates/verify/:code` | Public verify     | Public           |
+| POST   | `/api/certificates`              | Issue certificate | Admin, Organizer |
+| POST   | `/api/certificates/bulk`         | Bulk issue        | Admin, Organizer |
+| DELETE | `/api/certificates/:id`          | Revoke            | Admin            |
 
 ### Certificate Schema
 
@@ -1465,14 +1465,20 @@ interface IPartner {
 interface ICertificate {
   _id: ObjectId;
   user: ObjectId;
-  type: 'event_attendance' | 'event_speaker' | 'hackathon_participation' | 'hackathon_winner' | 'volunteer' | 'special';
+  type:
+    | "event_attendance"
+    | "event_speaker"
+    | "hackathon_participation"
+    | "hackathon_winner"
+    | "volunteer"
+    | "special";
   title: string;
   description?: string;
   event?: ObjectId;
   hackathon?: ObjectId;
   verificationCode: string;
   fileUrl?: string;
-  status: 'pending' | 'issued';
+  status: "pending" | "issued";
   issuedBy: ObjectId;
   issuedAt: Date;
   createdAt: Date;
@@ -1485,13 +1491,13 @@ interface ICertificate {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/announcements` | List announcements | Member |
-| GET | `/api/announcements/:id` | Get detail | Member |
-| POST | `/api/announcements` | Create | Admin, Organizer |
-| PUT | `/api/announcements/:id` | Update | Admin, Organizer |
-| DELETE | `/api/announcements/:id` | Delete | Admin |
+| Method | Route                    | Description        | Access           |
+| ------ | ------------------------ | ------------------ | ---------------- |
+| GET    | `/api/announcements`     | List announcements | Member           |
+| GET    | `/api/announcements/:id` | Get detail         | Member           |
+| POST   | `/api/announcements`     | Create             | Admin, Organizer |
+| PUT    | `/api/announcements/:id` | Update             | Admin, Organizer |
+| DELETE | `/api/announcements/:id` | Delete             | Admin            |
 
 ### Announcement Schema
 
@@ -1500,8 +1506,8 @@ interface IAnnouncement {
   _id: ObjectId;
   title: string;
   body: string;
-  priority: 'low' | 'normal' | 'high' | 'urgent';
-  targetAudience: 'all' | 'members' | 'organizers';
+  priority: "low" | "normal" | "high" | "urgent";
+  targetAudience: "all" | "members" | "organizers";
   pinned: boolean;
   active: boolean;
   createdBy: ObjectId;
@@ -1517,19 +1523,19 @@ interface IAnnouncement {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/content` | List all blocks | Public |
-| GET | `/api/content/:key` | Get block by key | Public |
-| PUT | `/api/content/:key` | Update block | Admin, CM |
+| Method | Route               | Description      | Access    |
+| ------ | ------------------- | ---------------- | --------- |
+| GET    | `/api/content`      | List all blocks  | Public    |
+| GET    | `/api/content/:key` | Get block by key | Public    |
+| PUT    | `/api/content/:key` | Update block     | Admin, CM |
 
 ### ContentBlock Schema
 
 ```typescript
 interface IContentBlock {
   _id: ObjectId;
-  key: string;          // e.g., 'home_hero', 'about_mission'
-  section: string;      // e.g., 'home', 'about'
+  key: string; // e.g., 'home_hero', 'about_mission'
+  section: string; // e.g., 'home', 'about'
   title?: string;
   subtitle?: string;
   body?: string;
@@ -1548,13 +1554,13 @@ interface IContentBlock {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/analytics/overview` | Platform stats | Admin, Organizer |
-| GET | `/api/analytics/members` | Member metrics | Admin, Organizer |
-| GET | `/api/analytics/events` | Event metrics | Admin, Organizer |
-| GET | `/api/analytics/hackathons` | Hackathon metrics | Admin, HM |
-| GET | `/api/analytics/growth` | Growth trends | Admin |
+| Method | Route                       | Description       | Access           |
+| ------ | --------------------------- | ----------------- | ---------------- |
+| GET    | `/api/analytics/overview`   | Platform stats    | Admin, Organizer |
+| GET    | `/api/analytics/members`    | Member metrics    | Admin, Organizer |
+| GET    | `/api/analytics/events`     | Event metrics     | Admin, Organizer |
+| GET    | `/api/analytics/hackathons` | Hackathon metrics | Admin, HM        |
+| GET    | `/api/analytics/growth`     | Growth trends     | Admin            |
 
 ### Computed Metrics
 
@@ -1578,11 +1584,11 @@ interface IAnalyticsOverview {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/settings` | Get all settings | Admin |
-| GET | `/api/settings/:key` | Get setting | Admin |
-| PUT | `/api/settings/:key` | Update setting | Admin |
+| Method | Route                | Description      | Access |
+| ------ | -------------------- | ---------------- | ------ |
+| GET    | `/api/settings`      | Get all settings | Admin  |
+| GET    | `/api/settings/:key` | Get setting      | Admin  |
+| PUT    | `/api/settings/:key` | Update setting   | Admin  |
 
 ### Setting Schema
 
@@ -1591,7 +1597,7 @@ interface ISetting {
   _id: ObjectId;
   key: string;
   value: any;
-  category: 'general' | 'email' | 'features' | 'integrations';
+  category: "general" | "email" | "features" | "integrations";
   description?: string;
   updatedBy: ObjectId;
   updatedAt: Date;
@@ -1604,10 +1610,10 @@ interface ISetting {
 
 ### Endpoints
 
-| Method | Route | Description | Access |
-|---|---|---|---|
-| GET | `/api/audit-logs` | List logs (paginated) | Admin |
-| GET | `/api/audit-logs/:id` | Get detail | Admin |
+| Method | Route                 | Description           | Access |
+| ------ | --------------------- | --------------------- | ------ |
+| GET    | `/api/audit-logs`     | List logs (paginated) | Admin  |
+| GET    | `/api/audit-logs/:id` | Get detail            | Admin  |
 
 ### AuditLog Schema
 
@@ -1615,8 +1621,15 @@ interface ISetting {
 interface IAuditLog {
   _id: ObjectId;
   actor: ObjectId;
-  action: 'create' | 'update' | 'delete' | 'approve' | 'reject' | 'login' | 'export';
-  resource: string;     // e.g., 'event', 'user', 'hackathon'
+  action:
+    | "create"
+    | "update"
+    | "delete"
+    | "approve"
+    | "reject"
+    | "login"
+    | "export";
+  resource: string; // e.g., 'event', 'user', 'hackathon'
   resourceId: ObjectId;
   details?: Record<string, any>;
   ipAddress?: string;
@@ -1707,19 +1720,19 @@ Author creates content (Draft)
 
 # Security Model
 
-| Concern | Implementation |
-|---|---|
-| **Authentication** | JWT (access 15min + refresh 7d) |
-| **Authorization** | RBAC middleware on every protected route |
-| **Password** | bcrypt hashing (salt rounds 12) |
-| **Input Validation** | Zod schemas on all endpoints |
-| **File Upload** | Type + size validation, Cloudinary processing |
-| **Rate Limiting** | Express rate limiter on auth routes |
-| **CORS** | Whitelist web + desktop origins |
-| **Audit Trail** | All mutations logged with actor + details |
-| **Data Sanitization** | mongo-sanitize + xss-clean |
-| **Headers** | Helmet.js security headers |
-| **HTTPS** | Enforced in production |
+| Concern               | Implementation                                |
+| --------------------- | --------------------------------------------- |
+| **Authentication**    | JWT (access 15min + refresh 7d)               |
+| **Authorization**     | RBAC middleware on every protected route      |
+| **Password**          | bcrypt hashing (salt rounds 12)               |
+| **Input Validation**  | Zod schemas on all endpoints                  |
+| **File Upload**       | Type + size validation, Cloudinary processing |
+| **Rate Limiting**     | Express rate limiter on auth routes           |
+| **CORS**              | Whitelist web + desktop origins               |
+| **Audit Trail**       | All mutations logged with actor + details     |
+| **Data Sanitization** | mongo-sanitize + xss-clean                    |
+| **Headers**           | Helmet.js security headers                    |
+| **HTTPS**             | Enforced in production                        |
 
 ---
 
@@ -2295,24 +2308,24 @@ GET    /:id
 
 ### Index Strategy
 
-| Collection | Indexes |
-|---|---|
-| User | `email` (unique), `role`, `status` |
-| Application | `email` (unique), `status` |
-| Event | `slug` (unique), `status`, `startDate` |
-| Registration | `{event, user}` (compound unique) |
-| Attendance | `{event, user}` (compound unique) |
-| Hackathon | `slug` (unique), `status` |
-| Team | `{hackathon, name}` (compound unique), `inviteCode` |
-| Submission | `{hackathon, team}` (compound unique) |
-| Score | `{submission, judge}` (compound unique) |
-| Album | `event` |
-| Photo | `album` |
-| Post | `slug` (unique), `status`, `tags` |
-| Certificate | `verificationCode` (unique), `user` |
-| ContentBlock | `key` (unique) |
-| Setting | `key` (unique) |
-| AuditLog | `actor`, `resource`, `createdAt` |
+| Collection   | Indexes                                             |
+| ------------ | --------------------------------------------------- |
+| User         | `email` (unique), `role`, `status`                  |
+| Application  | `email` (unique), `status`                          |
+| Event        | `slug` (unique), `status`, `startDate`              |
+| Registration | `{event, user}` (compound unique)                   |
+| Attendance   | `{event, user}` (compound unique)                   |
+| Hackathon    | `slug` (unique), `status`                           |
+| Team         | `{hackathon, name}` (compound unique), `inviteCode` |
+| Submission   | `{hackathon, team}` (compound unique)               |
+| Score        | `{submission, judge}` (compound unique)             |
+| Album        | `event`                                             |
+| Photo        | `album`                                             |
+| Post         | `slug` (unique), `status`, `tags`                   |
+| Certificate  | `verificationCode` (unique), `user`                 |
+| ContentBlock | `key` (unique)                                      |
+| Setting      | `key` (unique)                                      |
+| AuditLog     | `actor`, `resource`, `createdAt`                    |
 
 ---
 

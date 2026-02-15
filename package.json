@@ -1,0 +1,51 @@
+{
+  "name": "apex-circle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Apex Circle - Monorepo for Backend, Frontend, and Desktop Application",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "---------- SETUP ----------": "",
+    "preinstall": "npx only-allow pnpm",
+    "install:all": "pnpm install && pnpm install:backend && pnpm install:frontend && pnpm install:desktop",
+    "install:backend": "pnpm --filter apex-circle-backend install",
+    "install:frontend": "pnpm --filter apex-circle-frontend install",
+    "install:desktop": "pnpm --filter apex-circle-desktop install",
+    "---------- DEV ----------": "",
+    "dev": "pnpm run --parallel --filter './Apex-Circle-*' dev",
+    "dev:backend": "pnpm --filter apex-circle-backend dev",
+    "dev:frontend": "pnpm --filter apex-circle-frontend dev",
+    "dev:desktop": "pnpm --filter apex-circle-desktop tauri dev",
+    "---------- BUILD ----------": "",
+    "build": "pnpm run --filter './Apex-Circle-*' build",
+    "build:backend": "pnpm --filter apex-circle-backend build",
+    "build:frontend": "pnpm --filter apex-circle-frontend build",
+    "build:desktop": "pnpm --filter apex-circle-desktop tauri build",
+    "---------- LINT & FORMAT ----------": "",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "format:backend": "prettier --write \"Apex-Circle-Backend/**/*.{js,ts,json,md}\"",
+    "format:frontend": "prettier --write \"Apex-Circle-Frontend/**/*.{js,ts,tsx,jsx,json,css,scss,md}\"",
+    "format:desktop": "prettier --write \"Apex-Circle-Dasktop-Application/**/*.{js,ts,tsx,jsx,json,css,scss,md}\"",
+    "lint": "pnpm run --parallel --filter './Apex-Circle-*' lint",
+    "---------- CLEAN ----------": "",
+    "clean": "pnpm run clean:backend && pnpm run clean:frontend && pnpm run clean:desktop && rimraf node_modules",
+    "clean:backend": "rimraf Apex-Circle-Backend/node_modules Apex-Circle-Backend/dist",
+    "clean:frontend": "rimraf Apex-Circle-Frontend/node_modules Apex-Circle-Frontend/dist Apex-Circle-Frontend/.next",
+    "clean:desktop": "rimraf Apex-Circle-Dasktop-Application/node_modules Apex-Circle-Dasktop-Application/dist",
+    "---------- GIT HOOKS ----------": "",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1"
+  }
+}

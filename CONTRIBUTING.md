@@ -53,12 +53,12 @@ This project and everyone participating in it is governed by our commitment to c
 
 ### Prerequisites
 
-| Tool | Version | Install |
-|---|---|---|
-| Node.js | 20+ | [nodejs.org](https://nodejs.org/) |
-| pnpm | Latest | `npm install -g pnpm` |
-| Rust | Latest stable | [rust-lang.org](https://www.rust-lang.org/tools/install) |
-| MongoDB | 7+ | [mongodb.com](https://www.mongodb.com/try/download/community) or Atlas |
+| Tool    | Version       | Install                                                                |
+| ------- | ------------- | ---------------------------------------------------------------------- |
+| Node.js | 20+           | [nodejs.org](https://nodejs.org/)                                      |
+| pnpm    | Latest        | `npm install -g pnpm`                                                  |
+| Rust    | Latest stable | [rust-lang.org](https://www.rust-lang.org/tools/install)               |
+| MongoDB | 7+            | [mongodb.com](https://www.mongodb.com/try/download/community) or Atlas |
 
 ### Frontend (Community Website)
 
@@ -108,17 +108,17 @@ Apex-Circle/
 
 Use the following prefixes for branch names:
 
-| Prefix | Purpose | Example |
-|---|---|---|
-| `feat/` | New feature | `feat/event-registration` |
-| `fix/` | Bug fix | `fix/login-redirect-loop` |
-| `docs/` | Documentation changes | `docs/update-readme` |
-| `refactor/` | Code refactoring | `refactor/auth-middleware` |
-| `style/` | Styling/UI changes | `style/dashboard-layout` |
-| `test/` | Adding or updating tests | `test/event-api-tests` |
-| `chore/` | Maintenance tasks | `chore/update-dependencies` |
-| `ci/` | CI/CD changes | `ci/add-lint-workflow` |
-| `hotfix/` | Urgent production fix | `hotfix/crash-on-signup` |
+| Prefix      | Purpose                  | Example                     |
+| ----------- | ------------------------ | --------------------------- |
+| `feat/`     | New feature              | `feat/event-registration`   |
+| `fix/`      | Bug fix                  | `fix/login-redirect-loop`   |
+| `docs/`     | Documentation changes    | `docs/update-readme`        |
+| `refactor/` | Code refactoring         | `refactor/auth-middleware`  |
+| `style/`    | Styling/UI changes       | `style/dashboard-layout`    |
+| `test/`     | Adding or updating tests | `test/event-api-tests`      |
+| `chore/`    | Maintenance tasks        | `chore/update-dependencies` |
+| `ci/`       | CI/CD changes            | `ci/add-lint-workflow`      |
+| `hotfix/`   | Urgent production fix    | `hotfix/crash-on-signup`    |
 
 ---
 
@@ -138,30 +138,30 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 
 ### Types
 
-| Type | Description |
-|---|---|
-| `feat` | A new feature |
-| `fix` | A bug fix |
-| `docs` | Documentation only changes |
-| `style` | Changes that do not affect the meaning of the code (formatting, etc.) |
-| `refactor` | A code change that neither fixes a bug nor adds a feature |
-| `perf` | A code change that improves performance |
-| `test` | Adding or correcting tests |
-| `build` | Changes that affect the build system or external dependencies |
-| `ci` | Changes to CI configuration files and scripts |
-| `chore` | Other changes that don't modify src or test files |
-| `revert` | Reverts a previous commit |
+| Type       | Description                                                           |
+| ---------- | --------------------------------------------------------------------- |
+| `feat`     | A new feature                                                         |
+| `fix`      | A bug fix                                                             |
+| `docs`     | Documentation only changes                                            |
+| `style`    | Changes that do not affect the meaning of the code (formatting, etc.) |
+| `refactor` | A code change that neither fixes a bug nor adds a feature             |
+| `perf`     | A code change that improves performance                               |
+| `test`     | Adding or correcting tests                                            |
+| `build`    | Changes that affect the build system or external dependencies         |
+| `ci`       | Changes to CI configuration files and scripts                         |
+| `chore`    | Other changes that don't modify src or test files                     |
+| `revert`   | Reverts a previous commit                                             |
 
 ### Scopes
 
-| Scope | Description |
-|---|---|
+| Scope      | Description               |
+| ---------- | ------------------------- |
 | `frontend` | Community website changes |
-| `desktop` | Desktop admin app changes |
-| `backend` | Backend API changes |
-| `docs` | Documentation changes |
-| `ci` | CI/CD pipeline changes |
-| `deps` | Dependency updates |
+| `desktop`  | Desktop admin app changes |
+| `backend`  | Backend API changes       |
+| `docs`     | Documentation changes     |
+| `ci`       | CI/CD pipeline changes    |
+| `deps`     | Dependency updates        |
 
 ### Examples
 
@@ -219,17 +219,17 @@ feat(backend)!: change authentication response format
 
 ### PR Labels
 
-| Label | Description |
-|---|---|
-| `frontend` | Changes to the community website |
-| `desktop` | Changes to the desktop app |
-| `backend` | Changes to the backend API |
-| `bug` | Bug fix |
-| `enhancement` | New feature or improvement |
-| `documentation` | Documentation updates |
-| `breaking-change` | Introduces breaking changes |
-| `good first issue` | Good for newcomers |
-| `help wanted` | Extra attention needed |
+| Label              | Description                      |
+| ------------------ | -------------------------------- |
+| `frontend`         | Changes to the community website |
+| `desktop`          | Changes to the desktop app       |
+| `backend`          | Changes to the backend API       |
+| `bug`              | Bug fix                          |
+| `enhancement`      | New feature or improvement       |
+| `documentation`    | Documentation updates            |
+| `breaking-change`  | Introduces breaking changes      |
+| `good first issue` | Good for newcomers               |
+| `help wanted`      | Extra attention needed           |
 
 ---
 
@@ -281,14 +281,14 @@ feat(backend)!: change authentication response format
 
 ### File Naming
 
-| Type | Convention | Example |
-|---|---|---|
-| Components | PascalCase | `EventCard.tsx` |
-| Hooks | camelCase with `use` prefix | `useEvents.ts` |
-| Utilities | camelCase | `formatDate.ts` |
-| Constants | SCREAMING_SNAKE_CASE | `API_ENDPOINTS.ts` |
-| Types/Interfaces | PascalCase | `Event.types.ts` |
-| API Routes | kebab-case | `event-routes.ts` |
+| Type             | Convention                  | Example            |
+| ---------------- | --------------------------- | ------------------ |
+| Components       | PascalCase                  | `EventCard.tsx`    |
+| Hooks            | camelCase with `use` prefix | `useEvents.ts`     |
+| Utilities        | camelCase                   | `formatDate.ts`    |
+| Constants        | SCREAMING_SNAKE_CASE        | `API_ENDPOINTS.ts` |
+| Types/Interfaces | PascalCase                  | `Event.types.ts`   |
+| API Routes       | kebab-case                  | `event-routes.ts`  |
 
 ---
 
