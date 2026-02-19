@@ -1,4 +1,3 @@
-
 import { getTheme } from "../../../../config/them.config";
 import SideBarLink from "../Components/SideBarLink";
 import {
@@ -46,7 +45,7 @@ const SideBar = () => {
         <h1>Operations</h1>
         <SideBarLink icon={<MdDashboard />} text="Dashboard" />
         <SideBarLink icon={<MdWork />} text="Projects" />
-        <SideBarLink icon={<MdGroup />} text="Teams"  link="/member"/>
+        <SideBarLink icon={<MdGroup />} text="Teams" link="/member" />
         <SideBarLink icon={<MdCalendarToday />} text="Calendar" />
         <SideBarLink icon={<MdSettings />} text="Settings" />
       </div>

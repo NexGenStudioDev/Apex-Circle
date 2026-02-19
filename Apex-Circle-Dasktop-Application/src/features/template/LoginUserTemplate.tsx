@@ -1,24 +1,23 @@
-import React from 'react'
-import SideBar from '../SideBar/v1/Section/SideBar'
-import { getTheme } from '../../config/them.config'
-import { Outlet } from 'react-router'
+import React from "react";
+import SideBar from "../SideBar/v1/Section/SideBar";
+import { getTheme } from "../../config/them.config";
+import { Outlet } from "react-router";
 
 const LoginUserTemplate = () => {
-
-    let theme = getTheme("light")
+  let theme = getTheme("light");
 
   return (
-   <div
+    <div
       className="dashboard-page flex  w-screen h-screen"
       style={{ background: theme.background.secondary }}
     >
       <SideBar />
 
       <div className="dashboard-content flex flex-row h-full bg-green-200 w-[83%]">
-            <Outlet />
+        <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LoginUserTemplate
+export default LoginUserTemplate;

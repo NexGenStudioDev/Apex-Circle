@@ -14,8 +14,8 @@ const SideBarLink = ({ icon, text, link }: SideBarLinkProps) => {
 
   return (
     <Link
-     to={link || "/"}
-     ref={LinkRef}
+      to={link || "/"}
+      ref={LinkRef}
       className="sidebar-link flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-colors duration-200"
       style={{
         fontFamily: theme.fontFamily.primary,
@@ -28,7 +28,6 @@ const SideBarLink = ({ icon, text, link }: SideBarLinkProps) => {
           LinkRef.current.style.backgroundColor = theme.background.secondary;
           LinkRef.current.style.color = theme.textColor.primary;
         }
-       
       }}
       onMouseOut={(e) => {
         if (LinkRef.current) {
